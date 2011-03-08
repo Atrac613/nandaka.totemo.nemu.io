@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+{% endblock %}
+
+{% block javascript %}
+<script src="/js/nemuio.js?20110308" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+<style type="text/css"> 
+	h1 {
+		position:absolute;
+		width:430px;
+		height:232px;
+		left:50%;
+		top:50%;
+		margin-left:-215px;
+		margin-top:-116px;
+		background-image:url(/images/nemuio.png);
+		text-indent:-9999px;
+	}
+	
+	.tweet {
+		position: absolute;
+		top: 30px;
+		left: 30px;
+	}
+	
+	.tweet .tweetBody p {
+		line-height: 1.5em;
+	}
+	
+	.baloon1 {
+		position: absolute;
+		font-size: 0.8em;
+		width: 150px;
+		height: 80px;
+	}
+	
+	.baloon1 .tweet .tweetBody {
+		position: relative;
+		top: -40px;
+		left: 45px;
+	}
+	
+	.baloon1 .tweet img {
+		position: relative;
+		top: 4px;
+		left: 0px;
+		width: 35px;
+		height: 35px;
+	}
+	
+	.baloon2 {
+		position: absolute;
+		font-size: 0.8em;
+		width: 230px;
+		height: 100px;
+	}
+	
+	.baloon2 .tweet .tweetBody {
+		position: relative;
+		top: -25px;
+		left: 45px;
+	}
+	
+	.baloon2 .tweet img {
+		position: relative;
+		top: 20px;
+		left: 0px;
+		width: 35px;
+		height: 35px;
+	}
+		
+	.baloon3 {
+		position: absolute;
+		font-size: 0.8em;
+		width: 330px;
+		height: 80px;
+		}
+		
+	.baloon3 .tweet .tweetBody{
+		position: relative;
+		top: -10px;
+		left: 55px;
+	}
+	
+	.baloon3 .tweet img {
+		position: relative;
+		top: 30px;
+		left: 10px;
+		width: 35px;
+		height: 35px;
+	}
+</style> 
+
+<h1>ねむいお</h1> 
+{% endblock %}

@@ -1,0 +1,8 @@
+cron:
+- description: add tweets
+  url: /cron/add
+  schedule: every 5 minutes
+  
+- description: delete tweets
+  url: /cron/delete
+  schedule: every 5 minutes

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Sorry... - {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/common.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/config.css" />
+{% endblock %}
+
+{% block content %}
+<h2>CSRF Warning</h2>
+
+<p>あらら？</p>
+<p>あなたとのセッションが正しくないようです・・・。</p>
+
+<p>下記の原因が考えられます。</p>
+
+<ul>
+	<li>サーバ側でセッションのリセットがあったかもしれません。</li>
+	<li>既に別のPC・ブラウザでログインしていませんか？</li>
+	<li>セッションを偽装してないですか？</li>
+</ul>
+
+<p>一度ログアウトして再ログインすることで改善する場合がありますよ。</p>
+
+<p><a href="/oauth/twitter/logout">ログアウトする</a></p>
+{% endblock %}

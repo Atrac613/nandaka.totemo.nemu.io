@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/common.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/top.css" />
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
+
+{% block content %}
+<p>Welcome, {{ nickname }} !</p>
+<ul>
+	<li><a href="/config">Config</a></li>
+	<li><a href="{{ logout_url }}">Logout</a></li>
+</ul>
+{% endblock %}

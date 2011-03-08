@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Config - {% endblock %}
+
+{% block css %}
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
+
+{% block content %}
+<h3>{{ nickname }}'s Config Setting</h3>
+<p><a href="/home">Home</a></p>
+
+<dl>
+<dt>Keywords</dt>
+<dd>
+{% if user_prefs.oauth_access_token_key.specifier %}
+<p>List | Delete</p>
+<form action="/config" method="post">
+<input type="hidden" name="mode" value="delete" />
+<ul>
+	{% for keyword in keywords %}
+	<li>{{ keyword.keyword }} <input type="checkbox" value="{{ keyword.id }}" name="deletes[]" /></li>
+	{% endfor %}
+</ul>
+<input type="submit" value="Delete" />
+</form>
+
+<p>New</p>
+<form action="/config" method="post">
+<input type="hidden" name="mode" value="add" />
+<input type="text" name="keyword" />
+<input type="submit" value="Submit" />
+</form>
+{% else %}
+Twitter account required.
+{% endif %}
+</dd>
+</dl>
+
+<dl>
+<dt>Twitter</dt>
+<dd>
+{% if user_prefs.oauth_access_token_key.specifier %}
+{{ user_prefs.oauth_access_token_key.specifier }} | <a href="/config?mode=delete_twitter_account">Delete</a><br />
+{% else %}
+<a href="/config?mode=add_twitter_account">Add</a><br />
+{% endif %}
+</dd>
+</dl>
+
+{% endblock %}
